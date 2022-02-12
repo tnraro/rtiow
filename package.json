@@ -1,0 +1,21 @@
+{
+  "name": "rtiow",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && npm run asbuild:optimized && vite build",
+    "preview": "vite preview",
+    "asbuild:untouched": "asc assembly/index.ts --target debug",
+    "asbuild:optimized": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.19.23",
+    "typescript": "^4.5.4",
+    "vite": "^2.8.0"
+  },
+  "dependencies": {
+    "@assemblyscript/loader": "^0.19.23"
+  }
+}
